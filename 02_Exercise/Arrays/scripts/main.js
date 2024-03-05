@@ -28,3 +28,19 @@ console.log(foo); // -> return -1
 peoples = ["Greg", "Mary", "Devon", "James"];
 peoples.splice(2, 1, "Elizabeth", "Artie");
 console.log(peoples);
+
+// First task
+console.log("=====");
+let data = ["Greg", "Mary", "Devon", "James"];
+
+data.shift();
+data.pop();
+
+console.log("Array after removing first and last elements:");
+console.log(data);
+
+data.push("John", "Alice");
+data.unshift("Michael");
+
+console.log("Array after adding new elements in the beginning and the end:");
+console.log(data);

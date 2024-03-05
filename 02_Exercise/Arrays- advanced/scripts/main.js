@@ -1,16 +1,15 @@
 const numbers = [10, 20, 30, 40, 50, 75, 125];
 
 // Use forEach
-numbers.forEach(num => console.log(num));
+// numbers.forEach((num) => console.log(num)); // console.log(numbers);
 
 // Use Map
 const newArray = numbers.map((item) => {
-    if (item % 2 == 0) {
-        return item + ' is even';
-    }
-    else {
-        return item + ' is odd';
-    }
+  if (item % 2 == 0) {
+    return `${item} is even`;
+  } else {
+    return `${item} is odd`;
+  }
 });
 console.log(newArray);
 
@@ -20,6 +19,12 @@ console.log(average);
 
 // Use Filter
 const filteredNumbers = numbers.filter((num) => {
-    return num >= 25;
+  return num >= 25;
 });
 console.log(filteredNumbers);
+
+const oddNumbers = numbers.filter((num) => num % 2 != 0);
+const evenNumbers = numbers.filter((num) => num % 2 == 0);
+
+console.log("eventNumbers: ", evenNumbers);
+console.log("oddNumbers: ", oddNumbers);

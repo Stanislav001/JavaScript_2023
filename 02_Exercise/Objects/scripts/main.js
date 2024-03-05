@@ -1,7 +1,7 @@
 const user = {
   firstName: "Stanislav",
   lastName: "Stanchev",
-  age: 20,
+  age: 23,
   fullName: function () {
     return `${this.firstName} ${this.lastName}`;
   },
@@ -20,7 +20,9 @@ console.log(user.firstName);
 delete user.firstName;
 
 for (const key in user) {
-  console.log(`${key}: ${user[key]}`);
+  if (typeof user[key] !== "function") {
+    console.log(`${key}: ${user[key]}`);
+  }
 }
 
 class User {
@@ -44,3 +46,4 @@ class User {
 
 const stanislav = new User("Stanislav", "Todorov", 20);
 console.log(stanislav);
+console.log(stanislav.getFullName());
