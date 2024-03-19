@@ -1,7 +1,7 @@
 function showText() {
-    const moreButton = document.getElementById('more');
-    moreButton.style.display = 'none';
-    const moreText = document.getElementById('text');
-    moreText.style.display = 'block';
+  const moreButton = document.querySelector("#more");
+  const moreText = document.querySelector("#text");
 
+  moreButton.style.display = "none";
+  moreText.style.display = "block";
 }
